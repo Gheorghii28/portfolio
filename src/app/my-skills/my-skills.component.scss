@@ -1,0 +1,55 @@
+.my-skills {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 7vw;
+
+    .content {
+        position: relative;
+    }
+
+    .headline {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: -62px;
+
+        h2 {
+            background-color: var(--cream-color);
+            padding: 0 10px;
+        }
+    }
+}
+
+.skills-container {
+    border: 4px solid var(--black, #000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+    }
+
+    app-skills {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 2vw;
+    }
+}
+
+.arrow-line {
+    transform: scaleX(-1);
+    left: calc(0vw);
+}

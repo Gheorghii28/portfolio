@@ -1,0 +1,19 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        width: 70px;
+    }
+
+    span {
+        text-align: center;
+        font-family: 'Overpass', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+}
