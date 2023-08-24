@@ -14,6 +14,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { SkillsComponent } from './skills/skills.component';
+import { SvgService } from './services/svg.service';
+import { MenuService } from './services/menu-state.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,11 @@ import { SkillsComponent } from './skills/skills.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    MenuService,
+    SvgService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

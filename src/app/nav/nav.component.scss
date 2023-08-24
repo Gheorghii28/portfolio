@@ -7,6 +7,17 @@ nav {
     top: 0;
     background-color: var(--cream-color);
     z-index: 10;
+    
+    @media (max-width: 1024px) {
+            
+    }
+
+    @media (max-width: 768px) {
+    }
+
+    @media (max-width: 480px) {
+        padding: 20px 0;
+    }
 
     .wrapper {
         display: flex;
@@ -15,13 +26,40 @@ nav {
     }
 
     img {
-        height: 32px;
-        width: auto;
         cursor: pointer;
+
+        @media (max-width: 1024px) {
+            height: 40px;
+            width: auto;
+        }
+        
+        @media (max-width: 768px) {
+            height: 32px;
+            width: auto;
+        }
+        
+        @media (max-width: 480px) {
+            height: 32px;
+            width: auto;
+        }
     }
 
-    .logo {
-        height: 48px;
+    .menu-icon {
+        cursor: pointer;
+        
+        @media (max-width: 1024px) {
+            height: 40px;
+            width: auto;
+        }
+    
+        @media (max-width: 768px) {
+            height: 32px;
+            width: auto;
+        }
+    
+        @media (max-width: 480px) {
+            height: 28px;
+            width: auto;
+        }
     }
-
 }

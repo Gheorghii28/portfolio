@@ -20,6 +20,18 @@ header {
         justify-content: center;
         align-items: center;
 
+        @media (max-width: 1024px) {
+            margin-bottom: 190px;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 190px;
+        }
+
+        @media (max-width: 480px) {
+            margin-bottom: 190px;
+        }
+
         .line {
             display: flex;
             justify-content: space-between;
@@ -27,6 +39,18 @@ header {
             width: calc(100% - 100px);
             margin-top: 20px;
             gap: 10px;
+
+            @media (max-width: 1024px) {
+                width: calc(100% - 20px);
+            }
+
+            @media (max-width: 768px) {
+                width: calc(100% - 20px);
+            }
+
+            @media (max-width: 480px) {
+                width: calc(100% - 20px);
+            }
 
             span {
                 white-space: nowrap;
@@ -38,13 +62,60 @@ header {
                 font-weight: 700;
                 line-height: 100%;
                 letter-spacing: -1.2px;
+
+                @media (max-width: 1024px) {
+                    // font-size: 16px;
+                    // letter-spacing: -0.575px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                    letter-spacing: -0.575px;
+                }
+
+                @media (max-width: 480px) {
+                    font-size: 16px;
+                    letter-spacing: -0.575px;
+                }
             }
 
             div {
                 width: 100%;
                 height: 3px;
                 background-color: black;
+
+                @media (max-width: 1024px) {
+                    height: 2px;
+                }
+
+                @media (max-width: 768px) {
+                    height: 2px;
+                }
+
+                @media (max-width: 480px) {
+                    height: 2px;
+                }
             }
+        }
+    }
+
+    .btn-send {
+        // display: none;
+        position: absolute;
+
+        @media (max-width: 1024px) {
+            // display: initial;
+            // bottom: 200px;
+        }
+
+        @media (max-width: 768px) {
+            // display: initial;
+            bottom: 200px;
+        }
+
+        @media (max-width: 480px) {
+            // display: initial;
+            bottom: 200px;
         }
     }
 
@@ -56,6 +127,18 @@ header {
         position: absolute;
         bottom: 50px;
 
+        @media (max-width: 1024px) {
+            bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            bottom: 30px;
+        }
+
+        @media (max-width: 480px) {
+            bottom: 30px;
+        }
+
         .email {
             font-family: 'Overpass', sans-serif;
             font-size: 16px;
@@ -65,24 +148,83 @@ header {
             display: block;
             writing-mode: vertical-rl;
             transform: rotate(180deg);
+
+            @media (max-width: 1024px) {
+                // font-size: 14px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 14px;
+            }
         }
 
         .header-bottom-right {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
 
-            img {
-                width: 96px;
-                height: 160px;
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                right: -24px;
+                bottom: 0;
+
+                @media (max-width: 1024px) {
+                    gap: 10px;
+                    right: -20px;
+                }
+
+                @media (max-width: 768px) {
+                    gap: 10px;
+                    right: -20px;
+                }
+
+                @media (max-width: 480px) {
+                    gap: 10px;
+                    right: -20px;
+                }
+            }
+
+            svg {
+                margin-bottom: 10px;
+
+                @media (max-width: 1024px) {
+                    scale: 0.8;
+                    margin-bottom: -15px;
+                }
+
+                @media (max-width: 768px) {
+                    scale: 0.5;
+                    margin-bottom: -40px;
+                }
+
+                @media (max-width: 480px) {
+                    scale: 0.5;
+                    margin-bottom: -40px;
+                }
             }
 
             .scroll-text {
                 font-family: 'Overpass';
-                font-size: 23px;
+                font-size: 24px;
                 font-weight: 300;
                 line-height: 100%;
                 letter-spacing: -0.575px;
+
+                @media (max-width: 1024px) {
+                    // font-size: 18px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 18px;
+                }
+
+                @media (max-width: 480px) {
+                    font-size: 18px;
+                }
             }
         }
     }

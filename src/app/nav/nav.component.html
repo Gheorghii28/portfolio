@@ -1,6 +1,12 @@
 <nav>
     <div class="wrapper">
-        <img class="logo" src="../../assets/img/GP-logo.png">
-        <img src="../../assets/icons/menu-icons/menu-icon-1.svg">
+        <a href="/">
+            <img class="logo" src="../../assets/img/logo-light.png">
+        </a>
+        <svg (click)="toggleMenuFromNav()" class="menu-icon" width="44" height="38" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="path1-nav" [attr.d]="paths[0]['path1']" stroke="black" stroke-width="4" stroke-linecap="square"/>
+            <path class="path2-nav" [attr.d]="paths[0]['path2']" stroke="black" stroke-width="4" stroke-linecap="square"/>
+            <path class="path3-nav" [attr.d]="paths[0]['path3']" stroke="black" stroke-width="4" stroke-linecap="square"/>
+        </svg>
     </div>
 </nav>

@@ -1,1 +1,31 @@
-<p>footer-bar works!</p>
+<div class="footer-bar">
+    <div class="left">
+        <a href="/">
+            <img class="logo" src="../../assets/img/logo-dark.png">
+        </a>
+        <span>© Gheorghii Popovici 2023</span>
+    </div>
+    <div class="right pos-rel">
+        <a href="#header" class="desktop-display anker-arrow-top pos-rel">
+            <svg (mouseenter)="toggleAnimation()" (mouseleave)="toggleAnimation()" width="55" height="80"
+                viewBox="0 0 55 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="path1-footer" [attr.d]="path1" stroke="#FFFCF3" stroke-width="4" />
+                <path class="path2-footer" [attr.d]="path2" stroke="#FFFCF3" stroke-width="4" />
+            </svg>
+        </a>
+        <div class="links">
+            <a href="#">
+                <img src="../../assets/icons/github.svg">
+            </a>
+            <a href="#">
+                <img src="../../assets/icons/email.svg">
+            </a>
+            <a href="#">
+                <img src="../../assets/icons/linkedin.svg">
+            </a>
+        </div>
+        <div class="legal-notice-container">
+            <a class="legal-notice" href="#">Legal notice</a>
+        </div>
+    </div>
+</div>

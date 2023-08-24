@@ -1,6 +1,4 @@
-<header class="pos-rel">
-    <app-nav></app-nav>
-    <app-menu style="display: none;"></app-menu>
+<header id="header" class="pos-rel">
     <div class="wrapper header-content pos-rel">
         <div class="headline">
             <h1>Frontend <br> Developer</h1>
@@ -9,11 +7,20 @@
                 <span>Gheorghii Popovici</span>
             </div>
         </div>
+        <div class="btn-send mobile-display">
+            <a href="#section-footer" class="btn">Send a message</a>
+        </div>
         <div class="header-bottom">
             <span class="email">gheorghii.popovici89@gmail.com</span>
-            <div class="header-bottom-right">
-                <img src="../../assets/icons/arrow-bottom-icons/arrow-bottom-3.svg">
-                <span class="scroll-text">Scroll <br> Down</span>
+            <div class="header-bottom-right pos-rel">
+                <div>
+                    <svg width="96" height="170"
+                        viewBox="0 0 96 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="path1-header" [attr.d]="path1" stroke="black" stroke-width="3" />
+                        <path class="path2-header" [attr.d]="path2" stroke="black" stroke-width="3" />
+                    </svg>
+                    <span class="scroll-text">Scroll <br> Down</span>
+                </div>
             </div>
         </div>
     </div>
