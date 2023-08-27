@@ -32,6 +32,27 @@
 
         h2 {
             margin-bottom: 35px;
+            position: relative;
+
+            svg {
+                position: absolute;
+                bottom: 100%;
+                left: 70%;
+
+                @media (max-width: 1024px) {
+                    
+                }
+                
+                @media (max-width: 768px) {
+                    left: 0;
+                }
+                
+                @media (max-width: 480px) {
+                    scale: 0.7;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
 
             @media (min-width: 1025px) {
                 // margin-top: 5vw;

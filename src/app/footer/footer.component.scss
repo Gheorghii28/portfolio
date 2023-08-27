@@ -22,6 +22,25 @@
     h2 {
         color: var(--cream-color);
         margin-top: 120px;
+        position: relative;
+
+        svg {
+            position: absolute;
+            bottom: 100%;
+            left: 70%;
+
+            @media (max-width: 1024px) {}
+
+            @media (max-width: 768px) {
+                left: 0;
+            }
+
+            @media (max-width: 480px) {
+                scale: 0.7;
+                bottom: 0;
+                left: 0;
+            }
+        }
 
         &:hover {
             color: var(--secundario-color);
@@ -31,12 +50,12 @@
             margin-top: 53px;
             text-align: start !important;
         }
-        
+
         @media (max-width: 768px) {
             margin-top: 53px;
             text-align: start !important;
         }
-        
+
         @media (max-width: 480px) {
             margin-top: 53px;
             text-align: start !important;
