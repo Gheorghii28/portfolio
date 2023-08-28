@@ -1,10 +1,11 @@
-import { ElementRef, Injectable, ViewChild } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { SvgService } from './svg.service';
 import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class MenuService {
 
   paths = [
@@ -49,14 +50,12 @@ export class MenuService {
       viewBox: '0 0 40 32'
     }
   ];
+
   isMenuOpen: boolean = false;
   isMenuContentDisplayed: boolean = false;
-
   private selectedSvgElement = new Subject<SVGSVGElement>();
 
-  constructor(private svgService: SvgService) {
-
-  }
+  constructor(private svgService: SvgService) { }
 
   setSelectedSvgElement(svgElement: SVGSVGElement) {
     this.selectedSvgElement.next(svgElement);

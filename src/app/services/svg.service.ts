@@ -4,6 +4,7 @@ import anime from 'animejs/lib/anime.es';
 @Injectable({
   providedIn: 'root'
 })
+
 export class SvgService {
 
   svgAnimation(pathClass: any, fromPath: any, toPath: any, duration: number) {

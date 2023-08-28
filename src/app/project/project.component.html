@@ -1,30 +1,30 @@
 <section class="project">
-    <div class="wrapper">
-        <div class="content">
-            <div class="left pos-rel">
-                <img class="project-img" src="../../assets/img/join.svg">
-                <div class="frame">
-                    <div class="pos-rel">
-                        <img src="../../assets/icons/arrow-circle.svg">
+    <div class="content">
+        <div *ngFor="let project of projects; let i = index" [ngClass]="{'odd-project-class': i % 2 !== 0}" class="project-content">
+            <div class="left">
+                <div class="left-content pos-rel">
+                    <img class="project-img" src="../../assets/img/{{project['imgSrc']}}">
+                    <div class="frame">
+                        <div class="pos-rel">
+                            <img class="arrow-circle" src="../../assets/icons/arrow-circle.svg">
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="right">
-                <div class="nr pos-rel">
-                    <span>01/05</span>
+                <div class="nr">
+                    <span>{{project['nr']}}/{{projects.length}}</span>
                 </div>
                 <div class="info">
-                    <h3>Join</h3>
-                    <span>Angular | TypeScript | HTML CSS | Firebase</span>
-                    <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop
-                        functions, assign users and categories.
-                    </p>
+                    <h3>{{project['name']}}</h3>
+                    <span>{{project['technologies']}}</span>
+                    <p>{{project['description']}}</p>
                     <div class="btn-container">
-                        <a href="#" class="btn">Github</a>
-                        <a href="#" class="btn">Live</a>
+                        <a href="{{project['githubLink']}}" class="btn" target="_blank">Github</a>
+                        <a href="{{project['webLink']}}" class="btn" target="_blank">Live</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>   
     </div>
 </section>

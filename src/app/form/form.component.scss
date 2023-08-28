@@ -6,14 +6,6 @@
     @media (max-width: 1024px) {
         border: 3px solid transparent;
     }
-    
-    @media (max-width: 768px) {
-        border: 3px solid transparent;
-    }
-    
-    @media (max-width: 480px) {
-        border: 3px solid transparent;
-    }
 
     &:hover {
         border-color: var(--cream-color);
@@ -52,14 +44,6 @@
     @media (max-width: 1024px) {
         font-size: 14px;
     }
-    
-    @media (max-width: 768px) {
-        font-size: 14px;
-    }
-    
-    @media (max-width: 480px) {
-        font-size: 14px;
-    }
 }
 
 #label-textarea {
@@ -75,15 +59,7 @@
     flex-direction: column;
     color: var(--cream-color);
 
-    @media (max-width: 1024px) {
-        // width: 100%;
-    }
-    
     @media (max-width: 768px) {
-        width: 100%;
-    }
-    
-    @media (max-width: 480px) {
         width: 100%;
     }
 
@@ -98,18 +74,11 @@
         margin-bottom: 18px;
 
         @media (max-width: 1024px) {
-            // white-space: pre-wrap;
             font-size: 26px;
         }
-        
+
         @media (max-width: 768px) {
             white-space: pre-wrap;
-            font-size: 26px;
-        }
-        
-        @media (max-width: 480px) {
-            white-space: pre-wrap;
-            font-size: 26px;
         }
     }
 
@@ -117,21 +86,12 @@
         white-space: nowrap;
 
         @media (max-width: 1024px) {
-            // white-space: pre-wrap;
             text-align: center;
             margin-bottom: 35px;
         }
-        
+
         @media (max-width: 768px) {
             white-space: pre-wrap;
-            text-align: center;
-            margin-bottom: 35px;
-        }
-        
-        @media (max-width: 480px) {
-            white-space: pre-wrap;
-            text-align: center;
-            margin-bottom: 35px;
         }
     }
 
@@ -160,15 +120,6 @@
             @media (max-width: 1024px) {
                 font-size: 14px;
             }
-            
-            @media (max-width: 768px) {
-                font-size: 14px;
-            }
-            
-            @media (max-width: 480px) {
-                font-size: 14px;
-            }
-            
 
             &:hover {
                 border-color: transparent;

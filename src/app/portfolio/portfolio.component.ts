@@ -21,6 +21,12 @@ export class PortfolioComponent {
   classPath2: string;
   isNotAnimated: boolean;
 
+  options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0
+  };
+
   constructor() {
     this.sectionRefName = 'portfolioSectionRef'
     this.classPath1 = '.path1-portfolio';

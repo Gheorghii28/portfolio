@@ -1,7 +1,7 @@
 <section *ngIf="menuService.isMenuOpen" class="menu">
-
     <div class="top pos-rel">
-        <div class="top-content" [class.top-to-center]="menuService.isMenuContentDisplayed" [class.center-to-top]="!menuService.isMenuContentDisplayed">
+        <div class="top-content" [class.top-to-center]="menuService.isMenuContentDisplayed"
+            [class.center-to-top]="!menuService.isMenuContentDisplayed">
             <div class="wrapper">
                 <a class="svg-wrapper" href="#section-about-me" (click)="toggleMenu()">
                     <svg xmlns="http://www.w3.org/2000/svg">
@@ -25,9 +25,9 @@
             <div class="bg-menu"></div>
         </div>
     </div>
-
     <div class="bottom pos-rel">
-        <div class="bottom-content" [class.bottom-to-center]="menuService.isMenuContentDisplayed" [class.center-to-bottom]="!menuService.isMenuContentDisplayed">
+        <div class="bottom-content" [class.bottom-to-center]="menuService.isMenuContentDisplayed"
+            [class.center-to-bottom]="!menuService.isMenuContentDisplayed">
             <div class="wrapper">
                 <div class="left">
                     <h2>Say Hi!</h2>
@@ -47,5 +47,4 @@
             </div>
         </div>
     </div>
-
 </section>

@@ -6,20 +6,7 @@
     margin-bottom: 70px;
     margin-top: 40px;
 
-    @media (max-width: 1024px) {
-        // flex-direction: column-reverse;
-        // margin: 72px 0 79px;
-        // gap: 28px;
-    }
-
     @media (max-width: 768px) {
-        align-items: center;
-        flex-direction: column-reverse;
-        margin: 72px 0 79px;
-        gap: 28px;
-    }
-
-    @media (max-width: 480px) {
         align-items: center;
         flex-direction: column-reverse;
         margin: 72px 0 79px;
@@ -31,17 +18,7 @@
         flex-direction: column;
         gap: 17px;
 
-        @media (max-width: 1024px) {
-            // gap: 28px;
-            // align-items: center;
-        }
-
         @media (max-width: 768px) {
-            gap: 28px;
-            align-items: center;
-        }
-
-        @media (max-width: 480px) {
             gap: 28px;
             align-items: center;
         }
@@ -56,12 +33,6 @@
 
             @media (max-width: 768px) {
                 height: 32px;
-                width: auto;
-            }
-
-            @media (max-width: 480px) {
-                height: 32px;
-                width: auto;
             }
         }
 
@@ -73,14 +44,6 @@
             line-height: 120%;
 
             @media (max-width: 1024px) {
-                font-size: 16px;
-            }
-
-            @media (max-width: 768px) {
-                font-size: 16px;
-            }
-
-            @media (max-width: 480px) {
                 font-size: 16px;
             }
         }
@@ -132,14 +95,6 @@
 
         .legal-notice-container {
 
-            @media (max-width: 1024px) {
-                // position: absolute;
-                // top: 175px;
-                // width: 100%;
-                // display: flex;
-                // justify-content: center;
-            }
-
             @media (max-width: 768px) {
                 position: absolute;
                 top: 175px;
@@ -147,15 +102,6 @@
                 display: flex;
                 justify-content: center;
             }
-
-            @media (max-width: 480px) {
-                position: absolute;
-                top: 175px;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-
         }
 
         .legal-notice {
@@ -164,8 +110,6 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 120%;
-
-
         }
     }
 }

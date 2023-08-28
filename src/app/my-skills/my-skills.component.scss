@@ -1,12 +1,11 @@
 .my-skills {
     width: 100%;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    // margin-top: 7vw;
     padding-top: 260px;
+    padding-bottom: 150px;
 
     @media (max-width: 1480px) {
         padding-top: 210px;
@@ -16,16 +15,19 @@
         padding-top: 120px;
     }
 
-    @media (max-width: 768px) {
-        padding-top: 120px;
-    }
-    
     @media (max-width: 480px) {
         padding-top: 76px;
+        padding-bottom: 110px;
     }
 
     .content {
         position: relative;
+
+        @media (max-width: 1024px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     .headline {
@@ -36,14 +38,6 @@
         top: -62px;
 
         @media (max-width: 1024px) {
-            top: -21px;
-        }
-        
-        @media (max-width: 768px) {
-            top: -21px;
-        }
-        
-        @media (max-width: 480px) {
             top: -21px;
         }
 
@@ -57,32 +51,17 @@
                 bottom: 100%;
                 left: 70%;
 
-                @media (max-width: 1024px) {
-                    
-                }
-                
                 @media (max-width: 768px) {
                     left: 0;
                 }
-                
+
                 @media (max-width: 480px) {
                     scale: 0.7;
                     bottom: 0;
-                    left: 0;
                 }
             }
 
             @media (max-width: 1024px) {
-                padding: 0px 5px;
-                width: max-content;
-            }
-            
-            @media (max-width: 768px) {
-                padding: 0px 5px;
-                width: max-content;
-            }
-            
-            @media (max-width: 480px) {
                 padding: 0px 5px;
                 width: max-content;
             }
@@ -96,79 +75,10 @@
     align-items: center;
     justify-content: center;
     height: 70vh;
+    width: 100%;
 
-    div {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 10px;
-        justify-content: center;
-        align-items: center;
-        row-gap: 5vw;
-        column-gap: 5vw;
-
-        @media (max-width: 1024px) {
-            grid-template-columns: repeat(5, 1fr);
-        }
-        
-        @media (max-width: 768px) {
-            grid-template-columns: repeat(3, 1fr) !important;
-            column-gap: 10vw;
-        }
-        
-        @media (max-width: 480px) {
-            grid-template-columns: repeat(3, 1fr);
-            column-gap: 5vw;
-        }
-    }
-
-    app-skills {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0px 2vw;
-
-        @media (max-width: 1024px) {
-            // &:last-child {
-            //     grid-column: span 3;
-            //     justify-content: center;
-            // }
-        }
-        
-        @media (max-width: 768px) {
-            &:last-child {
-                grid-column: span 3;
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            &:last-child {
-                grid-column: span 3;
-                justify-content: center;
-            }
-        }
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 20px 0;
     }
 }
-
-// .arrow-line {
-//     transform: scaleX(-1);
-//     left: calc(0vw);
-
-//     @media (max-width: 1024px) {
-//         // margin-top: 15px;
-//         // margin-right: 80px;
-//         // margin-left: initial;
-//     }
-    
-//     @media (max-width: 768px) {
-//         margin-top: 15px;
-//         margin-right: 140px;
-//         margin-left: initial;
-//     }
-    
-//     @media (max-width: 480px) {
-//         margin-top: 15px;
-//         margin-right: 80px;
-//         margin-left: initial;
-//     }
-// }

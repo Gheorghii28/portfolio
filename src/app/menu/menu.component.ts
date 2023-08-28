@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { MenuService } from '../services/menu-state.service';
 
 @Component({
@@ -8,13 +8,10 @@ import { MenuService } from '../services/menu-state.service';
 })
 
 export class MenuComponent {
-  
 
-  constructor(public menuService: MenuService) {
-  }
+  constructor(public menuService: MenuService) { }
 
   toggleMenu() {
     this.menuService.menuAnimation();
   }
 }
-

@@ -1,4 +1,8 @@
-<div class="skills">
-    <img src="../../assets/icons/skills-icons/angular.svg">
-    <span>Angular</span>
+<div class="skills-container">
+    <div *ngFor="let skill of skills" class="skills-box">
+        <div class="skills">
+            <img src="../../assets/icons/skills-icons/{{returnSvgSrc(skill)}}">
+            <span [class.min-content]="skill === 'Material-Design'">{{returnSkillName(skill)}}</span>
+        </div>
+    </div>
 </div>

@@ -11,12 +11,6 @@ import { SvgService } from './services/svg.service';
 })
 export class AppComponent {
 
-  options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.2
-  };
-
   @ViewChild(MySkillsComponent, { static: true }) mySkillsComponent!: MySkillsComponent;
   @ViewChild(PortfolioComponent, { static: true }) portfolioComponent!: PortfolioComponent;
   @ViewChild(FooterComponent, { static: true }) footerComponent!: FooterComponent;
@@ -42,7 +36,7 @@ export class AppComponent {
   runObserveAnimate(mySectionElement: any, myComponent: any) {
     const observer = new IntersectionObserver((entries, observer) => {
       this.handleIntersectionEntries(entries, observer, myComponent);
-    }, this.options);
+    }, myComponent.options);
     observer.observe(mySectionElement);
   }
 

@@ -21,6 +21,12 @@ export class MySkillsComponent {
   classPath1: string;
   classPath2: string;
   isNotAnimated: boolean;
+
+  options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2
+  };
   
   constructor() {
     this.sectionRefName = 'mySkillsSectionRef'

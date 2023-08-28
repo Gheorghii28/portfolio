@@ -5,6 +5,11 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    padding-bottom: 150px;
+
+    @media (max-width: 480px) {
+        padding-bottom: 110px;
+    }
 
     .wrapper {
         display: flex;
@@ -15,16 +20,11 @@
 
     .headline {
         width: min-content;
-        
-        @media (max-width: 1024px) {
-            // width: 100%;
-        }
-        
+
         @media (max-width: 768px) {
-            // width: 100%;
             margin-top: 15px;
         }
-        
+
         @media (max-width: 480px) {
             width: 100%;
             margin-top: 0;
@@ -37,16 +37,13 @@
             svg {
                 position: absolute;
                 bottom: 100%;
-                left: 70%;
+                right: 70%;
+                transform: scaleX(-1);
 
-                @media (max-width: 1024px) {
-                    
-                }
-                
                 @media (max-width: 768px) {
-                    left: 0;
+                    right: 0;
                 }
-                
+
                 @media (max-width: 480px) {
                     scale: 0.7;
                     bottom: 0;
@@ -54,31 +51,9 @@
                 }
             }
 
-            @media (min-width: 1025px) {
-                // margin-top: 5vw;
-            }
-
             @media (max-width: 1024px) {
-                text-align: start !important;
-            }
-            
-            @media (max-width: 768px) {
-                text-align: start !important;
-            }
-            
-            @media (max-width: 480px) {
                 text-align: start !important;
             }
         }
     }
-
-    app-project {
-        margin-top: 70px;
-        margin-bottom: 50px;
-    }
-
-    // .arrow-line {
-    //     right: 0;
-    // }
-    
 }

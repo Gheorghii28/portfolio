@@ -22,6 +22,12 @@ export class FooterComponent {
   classPath2: string;
   isNotAnimated: boolean;
 
+  options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0
+  };
+
   constructor() {
     this.sectionRefName = 'footerSectionRef';
     this.classPath1 = '.path1-footer';

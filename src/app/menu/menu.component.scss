@@ -16,14 +16,8 @@
         width: 100%;
         height: calc(65vh - 100px);
 
-        @media (max-width: 1024px) {}
-
         @media (max-width: 768px) {
             height: calc(65vh - 50px);
-        }
-
-        @media (max-width: 480px) {
-            // height: calc(65vh - 50px);
         }
     }
 
@@ -211,8 +205,6 @@
     }
 }
 
-
-// soll responsiv angepasst werden --> .svg-wrapper
 .svg-wrapper {
     width: 270px;
     height: 60px;
