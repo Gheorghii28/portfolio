@@ -16,6 +16,9 @@ import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { SkillsComponent } from './skills/skills.component';
 import { SvgService } from './services/svg.service';
 import { MenuService } from './services/menu-state.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MainComponent } from './main/main.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +33,15 @@ import { MenuService } from './services/menu-state.service';
     FooterComponent,
     FormComponent,
     FooterBarComponent,
-    SkillsComponent
+    SkillsComponent,
+    MainComponent,
+    ImprintComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     MenuService,

@@ -75,7 +75,15 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            gap: 35px;
+            gap: 50px;
+
+            @media (min-width: 1441px) {
+                gap: 60px;
+            }
+
+            @media (max-width: 768px) {
+                gap: 35px;
+            }
         }
 
         .bg-menu {
@@ -209,6 +217,15 @@
     width: 270px;
     height: 60px;
     cursor: pointer;
+    scale: 1.5;
+
+    @media (max-width: 768px) {
+        scale: 1.2;
+    }
+
+    @media (max-width: 480px) {
+        scale: 1;
+    }
 
     svg {
         width: 270px;

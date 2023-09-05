@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, QueryList, Renderer2, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-project',
@@ -35,4 +35,81 @@ export class ProjectComponent {
       imgSrc: 'project-pokedex.jpg'
     }
   ]
+
+  isMobileView = false;
+  projectStates: boolean[] = [];
+
+  @ViewChildren('projectElement') projectElements!: QueryList<ElementRef>;
+
+  constructor(private renderer: Renderer2) { }
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    this.projectElements.forEach((element, i) => {
+      const rect = element.nativeElement.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const isFullyVisible = rect.top >= 0 && rect.bottom <= windowHeight;
+      this.projectStates[i] = isFullyVisible;
+      if (this.isMobileView && this.projectStates[i]) {
+        this.performMobileHoverActions(i);
+      }
+    });
+  }
+
+  ngOnInit() {
+    this.isMobileView = window.innerWidth <= 480;
+    this.projectStates = new Array(this.projects.length).fill(false);
+  }
+
+  getProjectClass(i: number): string {
+    return i % 2 !== 0 ? 'odd-project-class' : '';
+  }
+
+  performMobileHoverActions(index: number) {
+    const projectElement = this.projectElements.toArray()[index].nativeElement;
+    const frameElement = projectElement.querySelector('.frame');
+    const infoElement = projectElement.querySelector('.info');
+    const arrowCircleElement = projectElement.querySelector('.arrow-circle');
+    const projectImgElement = projectElement.querySelector('.project-img');
+
+    if (this.isMobileView && this.projectStates[index]) {
+
+      if (projectElement.classList.contains('odd-project-class')) {
+        if (frameElement) {
+          this.renderer.setStyle(frameElement, 'opacity', '1');
+          this.renderer.setStyle(frameElement, 'transform', 'translateX(-1vw) translateY(1vw)');
+          this.renderer.setStyle(frameElement, 'transition', 'transform 225ms ease-in-out');
+        }
+        if (infoElement) {
+          this.renderer.setStyle(infoElement, 'align-items', 'flex-start');
+          this.renderer.setStyle(infoElement, 'transform', 'translateX(0vw)');
+          this.renderer.setStyle(infoElement, 'transition', 'transform 225ms ease-in-out');
+        }
+        if (arrowCircleElement) {
+          this.renderer.setStyle(arrowCircleElement, 'transform', 'rotate(135deg) scale(1.5)');
+          this.renderer.setStyle(arrowCircleElement, 'transition', 'transform 225ms ease-in-out');
+        }
+        if (projectImgElement) {
+          this.renderer.setStyle(projectImgElement, 'filter', 'grayscale(0)');
+        }
+      } else {
+        if (frameElement) {
+          this.renderer.setStyle(frameElement, 'opacity', '1');
+          this.renderer.setStyle(frameElement, 'transform', 'translateX(1vw) translateY(1vw)');
+          this.renderer.setStyle(frameElement, 'transition', 'transform 225ms ease-in-out');
+        }
+        if (infoElement) {
+          this.renderer.setStyle(infoElement, 'transform', 'translateX(0vw)');
+          this.renderer.setStyle(infoElement, 'transition', 'transform 225ms ease-in-out');
+        }
+        if (arrowCircleElement) {
+          this.renderer.setStyle(arrowCircleElement, 'transform', 'rotate(-135deg) scale(1.5)');
+          this.renderer.setStyle(arrowCircleElement, 'transition', 'transform 225ms ease-in-out');
+        }
+        if (projectImgElement) {
+          this.renderer.setStyle(projectImgElement, 'filter', 'grayscale(0)');
+        }
+      }
+    } 
+  }
 }

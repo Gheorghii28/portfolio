@@ -43,4 +43,39 @@ export class SvgService {
       loop: false
     });
   }
+
+  checkAndRunObserveAnimate(myComponent: any) {
+    const mySectionRef = myComponent.mySectionRef;
+    if (mySectionRef) {
+      const mySectionElement = mySectionRef.nativeElement;
+      this.runObserveAnimate(mySectionElement, myComponent);
+    } else {
+      console.error(`${myComponent.sectionRefName} has not been initialized.`);
+    }
+  }
+
+  runObserveAnimate(mySectionElement: any, myComponent: any) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      this.handleIntersectionEntries(entries, observer, myComponent);
+    }, myComponent.options);
+    observer.observe(mySectionElement);
+  }
+
+  handleIntersectionEntries(entries: IntersectionObserverEntry[], observer: any, myComponent: any) {
+    entries.forEach((entry: any) => {
+      if (entry.isIntersecting && myComponent.isNotAnimated) {
+        this.moveArrow(myComponent);
+        myComponent.isNotAnimated = !myComponent.isNotAnimated;
+      }
+    });
+  }
+
+  moveArrow(myComponent: any) {
+    this.svgAnimation(myComponent.classPath1, myComponent.path1, myComponent.newPath1, 200);
+    this.svgAnimation(myComponent.classPath2, myComponent.path2, myComponent.newPath2, 200);
+    setTimeout(() => {
+      this.svgAnimation(myComponent.classPath1, myComponent.newPath1, myComponent.endPath1, 200);
+      this.svgAnimation(myComponent.classPath2, myComponent.newPath2, myComponent.endPath2, 200);
+    }, 200);
+  }
 }

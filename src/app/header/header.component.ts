@@ -25,11 +25,11 @@ export class HeaderComponent implements OnInit {
     }, 100);
     setInterval(() => {
       this.moveArrow();
-    }, 4000);
+    }, 2500);
   }
 
   moveArrow() {
-    this.svgService.svgAnimation('.path1-header', this.path1, this.newPath1, 3500);
-    this.svgService.svgAnimation('.path2-header', this.path2, this.newPath2, 3500);
+    this.svgService.svgAnimation('.path1-header', this.path1, this.newPath1, 2000);
+    this.svgService.svgAnimation('.path2-header', this.path2, this.newPath2, 2000);
   }
 }

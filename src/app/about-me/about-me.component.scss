@@ -4,7 +4,15 @@
     align-items: center;
     justify-content: center;
     margin-top: -50px;
-    padding-bottom: 150px;
+    padding-bottom: 95px;
+
+    @media (min-width: 1441px) {
+        padding-bottom: 40px;
+    }
+
+    @media (max-width: 1024px) {
+        padding-bottom: 145px;
+    }
 
     @media (max-width: 480px) {
         padding-bottom: 110px;
@@ -16,7 +24,6 @@
 
         @media (max-width: 1024px) {
             margin-bottom: 25px;
-            // margin-top: 10px;
         }
     }
 
@@ -50,10 +57,11 @@
         justify-content: center;
 
         img {
-            width: 40vw;
+            height: 60vh;
 
             @media (max-width: 1024px) {
                 width: 350px;
+                height: auto;
             }
             
             @media (max-width: 768px) {

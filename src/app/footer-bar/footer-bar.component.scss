@@ -94,13 +94,31 @@
         }
 
         .legal-notice-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+            cursor: pointer;
+
+            &:hover {
+                .legal-notice {
+                    font-weight: 600;
+                }
+
+                .line-container {
+                    opacity: 1;
+                }
+
+                .line {
+                    transform: translateX(58px);
+                }
+            }
 
             @media (max-width: 768px) {
                 position: absolute;
                 top: 175px;
                 width: 100%;
-                display: flex;
-                justify-content: center;
             }
         }
 
@@ -110,6 +128,19 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 120%;
+        }
+
+        .line-container {
+            width: 100%;
+            opacity: 0;
+
+            .line {
+                height: 2px;
+                width: 30px;
+                border-radius: 10px;
+                background: linear-gradient(to right, black, var(--secundario-color));
+                transition: transform 225ms ease-in-out;
+            }
         }
     }
 }

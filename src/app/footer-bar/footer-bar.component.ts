@@ -26,12 +26,12 @@ export class FooterBarComponent {
   }
 
   moveToTop() {
-    this.svgService.svgAnimation('.path1-footer', this.path1, this.newPath1, 225);
-    this.svgService.svgAnimation('.path2-footer', this.path2, this.newPath2, 225);
+    this.svgService.svgAnimation('.path1-footer-bar', this.path1, this.newPath1, 225);
+    this.svgService.svgAnimation('.path2-footer-bar', this.path2, this.newPath2, 225);
   }
 
   moveToBottom() {
-    this.svgService.svgAnimation('.path1-footer', this.newPath1, this.path1, 225);
-    this.svgService.svgAnimation('.path2-footer', this.newPath2, this.path2, 225);
+    this.svgService.svgAnimation('.path1-footer-bar', this.newPath1, this.path1, 225);
+    this.svgService.svgAnimation('.path2-footer-bar', this.newPath2, this.path2, 225);
   }
 }

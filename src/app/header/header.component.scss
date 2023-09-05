@@ -117,10 +117,15 @@ header {
             }
 
             svg {
-                margin-bottom: 10px;
+                margin-bottom: 0px;
+                scale: 0.8;
+
+                @media (min-width: 1441px) {
+                    scale: 1;
+                    margin-bottom: 10px;
+                }
 
                 @media (max-width: 1024px) {
-                    scale: 0.8;
                     margin-bottom: -15px;
                 }
 
