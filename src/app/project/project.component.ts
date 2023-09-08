@@ -13,7 +13,7 @@ export class ProjectComponent {
       technologies: 'Angular | TypeScript | HTML CSS | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and dropfunctions, assign users and categories.',
       githubLink: 'https://github.com/Gheorghii28/join/tree/6ff709f69cf00b0d44486d3aa5c1dbad73bd3361',
-      webLink: 'https://gheorghii-popovici.developerakademie.net/join/index.html',
+      webLink: 'https://join.gheorghii-popovici.de',
       imgSrc: 'project-join1.jpg'
     },
     {
@@ -22,7 +22,7 @@ export class ProjectComponent {
       technologies: 'JavaScript | HTML | CSS',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
       githubLink: 'https://github.com/Gheorghii28/el-pollo-loco/tree/dda51543fe6fc54861fd4e8f24f46b945a7ea1cc',
-      webLink: 'https://gheorghii-popovici.developerakademie.net/elpolloloco/index.html',
+      webLink: 'https://el-pollo-loco.gheorghii-popovici.de',
       imgSrc: 'project-el-pollo-loco.jpg'
     },
     {
@@ -31,7 +31,7 @@ export class ProjectComponent {
       technologies: 'JavaScript | HTML | CSS | Api',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       githubLink: 'https://github.com/Gheorghii28/pokedex/tree/42531b6862a8298859c3396e2900744463990ce9',
-      webLink: 'https://gheorghii-popovici.developerakademie.net/pokedex/index.html',
+      webLink: 'https://pokedex.gheorghii-popovici.de',
       imgSrc: 'project-pokedex.jpg'
     }
   ]

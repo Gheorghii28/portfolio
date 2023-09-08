@@ -207,7 +207,7 @@ export class FormComponent {
   async sendFormData(formElements: any) {
     try {
       this.showLoadingAnimation();
-      const response = await fetch('https://gheorghii-popovici.developerakademie.net/send_mail/send_mail.php', {
+      const response = await fetch('https://gheorghii-popovici.de/send_mail/send_mail.php', {
         method: 'POST',
         body: this.createFormData(formElements)
       });
