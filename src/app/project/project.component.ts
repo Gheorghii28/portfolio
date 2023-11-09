@@ -12,7 +12,7 @@ export class ProjectComponent {
       name: 'Join',
       technologies: 'Angular | TypeScript | HTML CSS | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and dropfunctions, assign users and categories.',
-      githubLink: 'https://github.com/Gheorghii28/join/tree/6ff709f69cf00b0d44486d3aa5c1dbad73bd3361',
+      githubLink: 'https://github.com/Gheorghii28/join-with-angular/tree/7185a99efe967ced8729d6e1b8889a695623b3ca',
       webLink: 'https://join.gheorghii-popovici.de',
       imgSrc: 'project-join1.jpg'
     },
