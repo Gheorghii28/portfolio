@@ -142,10 +142,7 @@ a {
 
 .wrapper {
     width: calc(100% - 50px);
-
-    @media (min-width: 1441px) {
-        width: calc(100% - 200px);
-    }
+    max-width: 1440px;
 }
 
 .pos-rel {

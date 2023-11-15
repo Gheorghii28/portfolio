@@ -59,6 +59,8 @@
         img {
             height: 60vh;
             background-color: #A8A8A8;
+            max-width: 500px;
+            max-height: 500px;
 
             @media (max-width: 1024px) {
                 width: 350px;
