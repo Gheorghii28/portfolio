@@ -9,6 +9,15 @@ export class ProjectComponent {
   projects = [
     {
       nr: '01',
+      name: 'DaBubble',
+      technologies: 'Angular | TypeScript | Firebase',
+      description: 'Chat messenger inspired by Slack. It offers group chats, direct messages and a search bar. Register, use the guest login or simply use your Google account.',
+      githubLink: 'https://github.com/matteutsch/daBubble',
+      webLink: 'https://dabubble.gheorghii-popovici.de',
+      imgSrc: 'dabubble.png'
+    },
+    {
+      nr: '02',
       name: 'Join',
       technologies: 'Angular | TypeScript | HTML CSS | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and dropfunctions, assign users and categories.',
@@ -17,7 +26,7 @@ export class ProjectComponent {
       imgSrc: 'project-join1.jpg'
     },
     {
-      nr: '02',
+      nr: '03',
       name: 'El Polo Loco',
       technologies: 'JavaScript | HTML | CSS',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
@@ -26,7 +35,7 @@ export class ProjectComponent {
       imgSrc: 'project-el-pollo-loco.jpg'
     },
     {
-      nr: '03',
+      nr: '04',
       name: 'Pokédex',
       technologies: 'JavaScript | HTML | CSS | Api',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
