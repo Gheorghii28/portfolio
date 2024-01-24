@@ -12,7 +12,7 @@ export class ProjectComponent {
       name: 'DaBubble',
       technologies: 'Angular | TypeScript | Firebase',
       description: 'Chat messenger inspired by Slack. It offers group chats, direct messages and a search bar. Register, use the guest login or simply use your Google account.',
-      githubLink: 'https://github.com/matteutsch/daBubble',
+      githubLink: 'https://github.com/Gheorghii28/daBubble.',
       webLink: 'https://dabubble.gheorghii-popovici.de',
       imgSrc: 'dabubble.png'
     },
