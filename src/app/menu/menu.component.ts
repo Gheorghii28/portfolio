@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuService } from '../services/menu-state.service';
 import { ScrollService } from '../services/scroll.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -10,11 +11,20 @@ import { ScrollService } from '../services/scroll.service';
 export class MenuComponent {
   constructor(
     public menuService: MenuService,
-    private scrollService: ScrollService
+    private scrollService: ScrollService,
+    private router: Router
   ) {}
 
-  public toggleMenu(sectionId: string): void {
+  public async toggleMenu(sectionId: string): Promise<void> {
+    await this.checkAndRedirect('imprint');
     this.scrollService.scrollToSection(sectionId);
     this.menuService.menuAnimation();
+  }
+
+  private async checkAndRedirect(keyword: string): Promise<void> {
+    const currentUrl = this.router.url;
+    if (currentUrl.includes(keyword)) {
+      await this.router.navigateByUrl('/');
+    }
   }
 }

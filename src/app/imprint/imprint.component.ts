@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ViewChild, Renderer2 } from '@angular/core';
 import { SvgService } from '../services/svg.service';
 import { FooterComponent } from '../footer/footer.component';
 
@@ -16,11 +16,16 @@ export class ImprintComponent {
   ngAfterViewInit() {
     this.svgService.checkAndRunObserveAnimate(this.footerComponent);
     this.hideForm();
+    this.scrollToTop();
   }
 
   hideForm() {
     const footerElement = this.footerComponent.mySectionRef.nativeElement;
     this.renderer.addClass(footerElement.querySelector('.form-container'), 'd-none');
     this.renderer.addClass(footerElement.querySelector('.anker-arrow-top'), 'd-none');
+  }
+
+  private scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
