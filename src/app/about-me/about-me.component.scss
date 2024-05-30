@@ -58,7 +58,7 @@
         
         img {
             height: 60vh;
-            background-color: #A8A8A8;
+            background-color: #cec6c6;
             max-width: 500px;
             max-height: 500px;
 
@@ -69,6 +69,7 @@
             
             @media (max-width: 768px) {
                 width: calc(100vw - 200px);
+                max-height: fit-content;
             }
             
             @media (max-width: 480px) {
