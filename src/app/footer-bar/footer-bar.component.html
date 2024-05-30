@@ -6,7 +6,7 @@
         <span>© Gheorghii Popovici 2023</span>
     </div>
     <div class="right pos-rel">
-        <a href="#header" class="desktop-display anker-arrow-top pos-rel">
+        <a (click)="scrollToTop()" class="desktop-display anker-arrow-top pos-rel">
             <svg (mouseenter)="toggleAnimation()" (mouseleave)="toggleAnimation()" width="55" height="80"
                 viewBox="0 0 55 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="path1-footer-bar" [attr.d]="path1" stroke="#FFFCF3" stroke-width="4" />

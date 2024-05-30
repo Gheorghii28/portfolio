@@ -34,4 +34,8 @@ export class FooterBarComponent {
     this.svgService.svgAnimation('.path1-footer-bar', this.newPath1, this.path1, 225);
     this.svgService.svgAnimation('.path2-footer-bar', this.newPath2, this.path2, 225);
   }
+
+  public scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
