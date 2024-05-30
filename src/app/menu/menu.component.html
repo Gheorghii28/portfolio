@@ -3,24 +3,24 @@
         <div class="top-content" [class.top-to-center]="menuService.isMenuContentDisplayed"
             [class.center-to-top]="!menuService.isMenuContentDisplayed">
             <div class="wrapper">
-                <a class="svg-wrapper" href="#section-about-me" (click)="toggleMenu()">
+                <button class="svg-wrapper" (click)="toggleMenu('section-about-me')">
                     <svg xmlns="http://www.w3.org/2000/svg">
                         <rect class="shape" />
                         <text x="17.665" y="45" class="text">About me</text>
                     </svg>
-                </a>
-                <a class="svg-wrapper" href="#section-my-skills" (click)="toggleMenu()">
+                </button>
+                <button class="svg-wrapper" (click)="toggleMenu('section-my-skills')">
                     <svg xmlns="http://www.w3.org/2000/svg">
                         <rect class="shape" />
                         <text x="37.325" y="45" class="text">My skills</text>
                     </svg>
-                </a>
-                <a class="svg-wrapper" href="#section-portfolio" (click)="toggleMenu()">
+                </button>
+                <button class="svg-wrapper" (click)="toggleMenu('section-portfolio')">
                     <svg xmlns="http://www.w3.org/2000/svg">
                         <rect class="shape" />
                         <text x="34.425" y="45" class="text">Portfolio</text>
                     </svg>
-                </a>
+                </button>
             </div>
             <div class="bg-menu"></div>
         </div>
