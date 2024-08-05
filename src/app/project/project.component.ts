@@ -29,7 +29,7 @@ export class ProjectComponent {
       nr: '03',
       name: 'El Polo Loco',
       technologies: 'JavaScript | HTML | CSS',
-      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
+      description: 'A fusion of an object-oriented approach and the classic jump-and-run genre. Join Pepe on his mission to collect coins and find salt bottles to throw at the evil chickens.',
       githubLink: 'https://github.com/Gheorghii28/el-pollo-loco/tree/dda51543fe6fc54861fd4e8f24f46b945a7ea1cc',
       webLink: 'https://el-pollo-loco.gheorghii-popovici.de',
       imgSrc: 'project-el-pollo-loco.jpg'

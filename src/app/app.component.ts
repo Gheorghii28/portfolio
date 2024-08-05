@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollService } from './services/scroll.service';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  constructor(private scrollService: ScrollService) {}
 
   ngOnInit() {
-    const htmlElement = document.querySelector('html');
-    if (htmlElement) {
-      htmlElement.style.scrollBehavior = 'smooth';
-    }
+    this.scrollService.getScrollSubject().subscribe(sectionId => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   }
 }
