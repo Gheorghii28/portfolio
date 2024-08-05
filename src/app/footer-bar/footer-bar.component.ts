@@ -7,7 +7,6 @@ import { SvgService } from '../services/svg.service';
   styleUrls: ['./footer-bar.component.scss']
 })
 export class FooterBarComponent {
-
   constructor(private svgService: SvgService) {}
 
   path1 = 'M45.7051 44.1267L27.7789 30.00049L9.85265 44.1267';
@@ -37,5 +36,10 @@ export class FooterBarComponent {
 
   public scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  public get currentYear(): string {
+    const currentDate = new Date();
+    return currentDate.getFullYear().toString();
   }
 }
