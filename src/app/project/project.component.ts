@@ -9,6 +9,15 @@ export class ProjectComponent {
   projects = [
     {
       nr: '01',
+      name: 'CRM',
+      technologies: 'Laravel | PHP | MySQL',
+      description: 'The CRM system provides efficient management of customers, tasks, and activities. It features a Kanban board with drag-and-drop functionality and calendar-based activity visualization. A robust search function allows users to quickly find data, while interactive tables and charts offer valuable insights.',
+      githubLink: 'https://github.com/Gheorghii28/CRM',
+      webLink: 'https://crm.gheorghii-popovici.de',
+      imgSrc: 'crm.jpg'
+    },
+    {
+      nr: '02',
       name: 'DaBubble',
       technologies: 'Angular | TypeScript | Firebase',
       description: 'Chat messenger inspired by Slack. It offers group chats, direct messages and a search bar. Register, use the guest login or simply use your Google account.',
@@ -17,7 +26,7 @@ export class ProjectComponent {
       imgSrc: 'dabubble.png'
     },
     {
-      nr: '02',
+      nr: '03',
       name: 'Join',
       technologies: 'Angular | TypeScript | HTML CSS | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and dropfunctions, assign users and categories.',
@@ -26,7 +35,7 @@ export class ProjectComponent {
       imgSrc: 'project-join1.jpg'
     },
     {
-      nr: '03',
+      nr: '04',
       name: 'El Polo Loco',
       technologies: 'JavaScript | HTML | CSS',
       description: 'A fusion of an object-oriented approach and the classic jump-and-run genre. Join Pepe on his mission to collect coins and find salt bottles to throw at the evil chickens.',
@@ -35,7 +44,7 @@ export class ProjectComponent {
       imgSrc: 'project-el-pollo-loco.jpg'
     },
     {
-      nr: '04',
+      nr: '05',
       name: 'Pokédex',
       technologies: 'JavaScript | HTML | CSS | Api',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
