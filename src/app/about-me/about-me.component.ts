@@ -7,9 +7,15 @@ import { ScrollService } from '../services/scroll.service';
   styleUrls: ['./about-me.component.scss'],
 })
 export class AboutMeComponent {
+  showMore: boolean = false;
+
   constructor(private scrollService: ScrollService) {}
 
   public scrollToSection(): void {
     this.scrollService.scrollToSection('section-footer');
+  }
+
+  public toggleMore(): void {
+    this.showMore = !this.showMore;
   }
 }

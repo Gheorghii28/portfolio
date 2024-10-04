@@ -3,18 +3,25 @@
         <h2>About me</h2>
         <div class="content">
             <div class="left">
-                <p>
-                    Hello! I'm Gheorghii, a passionate Frontend Developer dedicated to creating seamless and engaging user experiences. With expertise in HTML, CSS, JavaScript, and frameworks like Angular, I transform innovative ideas into interactive and responsive web applications.
-
-                    I have worked on various projects, from simple landing pages to complex single-page applications. I focus on writing clean, efficient, and maintainable code, ensuring every project is functional and visually appealing.
-                    
-                    I constantly learn new technologies and methodologies to stay at the forefront of web development. Collaboration and communication are essential to my workflow, and I enjoy working with designers, back-end developers, and other stakeholders to bring projects to life.
-                    
-                    When not coding, I explore the latest web design trends or enjoy a good book.
-                    
-                    Check out my portfolio to see my projects. Contact me if you think I’d be a good match for your projects!
+                <p style="margin-bottom: 18px;">
+                    Hello! I'm Gheorghii Popovici, a passionate web developer based in Kerpen, near Cologne, Germany. 
+                    With a background in digital marketing, I transitioned into the dynamic world of web development and am excited to share my experience and skills with you.
+                    <span *ngIf="!showMore" class="dots" style="cursor: pointer;"  (click)="toggleMore()">... Show more</span>
                 </p>
-                <div class="desktop-display">
+                <div *ngIf="showMore" id="more">
+                    <p style="margin-bottom: 18px;">
+                        Originally hailing from the Republic of Moldova, I now proudly call Germany my home. 
+                        Embarking on my programming path, I'm thrilled to channel my creativity and problem-solving skills into the ever-evolving tech industry. 
+                        In my earlier chapters, I wore multiple hats, working on digital marketing strategies, content creation, and social media management.
+                    </p>
+                    <p  style="margin-bottom: 18px;">
+                        This diverse experience eventually led me to web development, where I found my passion for building engaging digital solutions. 
+                        From collaborating with talented programmers and designers to orchestrating processes and web optimization, every step was a testament to innovation. 
+                        Explore my portfolio to see my projects.
+                        <span *ngIf="showMore" class="dots" style="cursor: pointer;" (click)="toggleMore()">... Show less</span>
+                    </p>
+                </div>
+                <div class="desktop-display"  style="margin-top: 60px;">
                     <button (click)="scrollToSection()" class="btn">Let’s talk</button>
                 </div>
             </div>

@@ -14,11 +14,16 @@ export class SkillsComponent {
     'JavaScript',
     'HTML',
     'CSS',
+    'TailwindCSS',
+    'Material-Design',
+    'Flowbite',
+    'PHP',
+    'Laravel',
+    'MySQL',
     'Firebase',
     'Git',
     'Scrum',
     'Rest-Api',
-    'Material-Design'
   ];
 
   constructor() { }

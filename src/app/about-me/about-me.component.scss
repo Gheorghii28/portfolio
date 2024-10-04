@@ -50,6 +50,21 @@
             justify-content: center;
             width: 100%;
         }
+
+        .dots {
+            color: var(--secundario-color);
+
+            &:hover {
+                text-decoration: underline;
+                transition: color 0.3s ease;
+            }
+        }
+
+        #more {
+            display: flex;
+            flex-direction: column;
+        }
+          
     }
 
     .right {
