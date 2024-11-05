@@ -18,6 +18,15 @@ export class ProjectComponent {
     },
     {
       nr: '02',
+      name: 'Spotifyify',
+      technologies: 'Angular | TypeScript | RxJS | API',
+      description: 'Single-page application that replicates the user interface and functionality of Spotify. It integrates the Spotify API to enable features such as music playback, search, and playlist and folder management with drag-and-drop capabilities. RxJS facilitates reactive data streams and ensures a seamless user experience.',
+      githubLink: 'https://github.com/Gheorghii28/Spotifyify',
+      webLink: 'https://angular-spotifyify.gheorghii-popovici.de',
+      imgSrc: 'spotifyify.jpg'
+    },
+    {
+      nr: '03',
       name: 'DaBubble',
       technologies: 'Angular | TypeScript | Firebase',
       description: 'Chat messenger inspired by Slack. It offers group chats, direct messages and a search bar. Register, use the guest login or simply use your Google account.',
@@ -26,7 +35,7 @@ export class ProjectComponent {
       imgSrc: 'dabubble.png'
     },
     {
-      nr: '03',
+      nr: '04',
       name: 'Join',
       technologies: 'Angular | TypeScript | HTML CSS | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and dropfunctions, assign users and categories.',
@@ -35,7 +44,7 @@ export class ProjectComponent {
       imgSrc: 'project-join1.jpg'
     },
     {
-      nr: '04',
+      nr: '05',
       name: 'El Polo Loco',
       technologies: 'JavaScript | HTML | CSS',
       description: 'A fusion of an object-oriented approach and the classic jump-and-run genre. Join Pepe on his mission to collect coins and find salt bottles to throw at the evil chickens.',
@@ -44,7 +53,7 @@ export class ProjectComponent {
       imgSrc: 'project-el-pollo-loco.jpg'
     },
     {
-      nr: '05',
+      nr: '06',
       name: 'Pokédex',
       technologies: 'JavaScript | HTML | CSS | Api',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
