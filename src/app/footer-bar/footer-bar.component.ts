@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SvgService } from '../services/svg.service';
+import { SharedService } from '../services/shared.service';
 
 @Component({
   selector: 'app-footer-bar',
@@ -7,7 +8,8 @@ import { SvgService } from '../services/svg.service';
   styleUrls: ['./footer-bar.component.scss']
 })
 export class FooterBarComponent {
-  constructor(private svgService: SvgService) {}
+
+  constructor(private svgService: SvgService, private sharedService: SharedService) {}
 
   path1 = 'M45.7051 44.1267L27.7789 30.00049L9.85265 44.1267';
   path2 = 'M28 80L28 30';
@@ -36,10 +38,15 @@ export class FooterBarComponent {
 
   public scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    this.goToTop();
   }
 
   public get currentYear(): string {
     const currentDate = new Date();
     return currentDate.getFullYear().toString();
+  }
+
+  goToTop() {
+    this.sharedService.triggerFocusElement('top-element');
   }
 }

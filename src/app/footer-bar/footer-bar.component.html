@@ -1,34 +1,42 @@
 <div class="footer-bar">
     <div class="left">
-        <a href="">
-            <img class="logo" src="./assets/img/logo-dark.png">
+        <a href="/">
+            <img class="logo" src="./assets/img/logo-dark.png" aria-label="Website logo, click to reload the page" alt="Logo of the website">
         </a>
-        <span>© Gheorghii Popovici {{ currentYear }}</span>
+        <span aria-hidden="true">© Gheorghii Popovici {{ currentYear }}</span>
     </div>
     <div class="right pos-rel">
-        <a (click)="scrollToTop()" class="desktop-display anker-arrow-top pos-rel">
-            <svg (mouseenter)="toggleAnimation()" (mouseleave)="toggleAnimation()" width="55" height="80"
-                viewBox="0 0 55 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="path1-footer-bar" [attr.d]="path1" stroke="#FFFCF3" stroke-width="4" />
-                <path class="path2-footer-bar" [attr.d]="path2" stroke="#FFFCF3" stroke-width="4" />
-            </svg>
-        </a>
-        <div class="links">
-            <a href="https://github.com/Gheorghii28" target="_blank">
-                <img src="./assets/icons/github.svg">
-            </a>
-            <a href="mailto:kontakt@gheorghii-popovici.de" target="_blank">
-                <img src="./assets/icons/email.svg">
-            </a>
-            <a href="https://www.linkedin.com/in/gheorghii-popovici-0475a017a/" target="_blank">
-                <img src="./assets/icons/linkedin.svg">
-            </a>
-        </div>
+        <ul class="links" aria-label="Social and contact links">
+            <li>
+                <a href="https://github.com/Gheorghii28" target="_blank" aria-label="Visit my GitHub profile. This link opens a new page." rel="noopener noreferrer">
+                    <img src="./assets/icons/github.svg" alt="Github icon">
+                </a>
+            </li>
+            <li>
+                <a href="mailto:kontakt@gheorghii-popovici.de" target="_blank" aria-label="Send me an email">
+                    <img src="./assets/icons/email.svg" alt="Email icon">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/gheorghii-popovici-0475a017a/" target="_blank" aria-label="Visit my LinkedIn profile. This link opens a new page." rel="noopener noreferrer">
+                    <img src="./assets/icons/linkedin.svg" alt="LinkedIn icon">
+                </a>
+            </li>
+        </ul>
         <div class="legal-notice-container">
-            <a class="legal-notice" [routerLink]="['imprint']">Legal notice</a>
+            <a class="legal-notice" [routerLink]="['imprint']" aria-label="Go to the legal notice page">Legal notice</a>
             <div class="line-container">
                 <div class="line"></div>
             </div>
+        </div>
+        <div class="arrow-top-container desktop-display pos-rel">
+            <button (click)="scrollToTop()" class="reset" aria-label="Back to top of page">
+                <svg (mouseenter)="toggleAnimation()" (mouseleave)="toggleAnimation()" width="55" height="80"
+                    viewBox="0 0 55 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="path1-footer-bar" [attr.d]="path1" stroke="#FFFCF3" stroke-width="4" />
+                    <path class="path2-footer-bar" [attr.d]="path2" stroke="#FFFCF3" stroke-width="4" />
+                </svg>
+            </button>
         </div>
     </div>
 </div>

@@ -2,26 +2,48 @@
     <div class="content">
         <div #projectElement *ngFor="let project of projects; let i = index" [ngClass]="getProjectClass(i)" class="project-content pos-rel">
             <div class="nr">
-                <span>{{project['nr']}}/{{projects.length}}</span>
+                <span aria-hidden="true">{{project['nr']}}/{{projects.length}}</span>
+                <span class="sr-only">This is projekt {{project['nr']}} out of {{projects.length}} in my portfolio</span>
             </div>
             <div class="left">
                 <div class="left-content pos-rel">
-                    <img class="project-img" src="./assets/img/{{project['imgSrc']}}">
+                    <img
+                        class="project-img" 
+                        src="./assets/img/{{project['imgSrc']}}"
+                        alt="{{project['name']}} project image"
+                        [attr.aria-label]="'This is the ' + project.name + ' project image.' + project.imgDescription"
+                        tabindex="-1"
+                    >
                     <div class="frame">
                         <div class="pos-rel">
-                            <img class="arrow-circle" src="./assets/icons/arrow-circle.svg">
+                            <img class="arrow-circle" src="./assets/icons/arrow-circle.svg" alt="Arrow circle icon" aria-hidden="true">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="right">
                 <div class="info">
-                    <h3>{{project['name']}}</h3>
-                    <span>{{project['technologies']}}</span>
+                    <h3 aria-hidden="true">{{project['name']}}</h3>
+                    <span aria-hidden="true">{{project['technologies']}}</span>
+                    <span class="sr-only">Technologies used in {{project['name']}} project: {{project['technologies']}}</span>
                     <p>{{project['description']}}</p>
                     <div class="btn-container">
-                        <a href="{{project['githubLink']}}" class="btn" target="_blank">Github</a>
-                        <a href="{{project['webLink']}}" class="btn" target="_blank">Live</a>
+                        <a 
+                            href="{{project['githubLink']}}" 
+                            class="btn pos-rel" target="_blank" 
+                            [attr.aria-label]="'GitHub repository of ' + project['name'] + '. This link opens a new page.'" 
+                            rel="noopener noreferrer">
+                            Github
+                            <img src="../../assets/icons/maximize.png" class="pos-abs icon-hover" role="presentation" alt="Maximize icon" aria-hidden="true">
+                        </a>
+                        <a 
+                            href="{{project['webLink']}}" 
+                            class="btn pos-rel" target="_blank" 
+                            [attr.aria-label]="'Live version of ' + project['name'] + ' .This link opens a new page.'" 
+                            rel="noopener noreferrer">
+                            Live
+                            <img src="../../assets/icons/maximize.png" class="pos-abs icon-hover" role="presentation" alt="Maximize icon" aria-hidden="true">
+                        </a>
                     </div>
                 </div>
             </div>

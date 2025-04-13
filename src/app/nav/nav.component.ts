@@ -12,6 +12,7 @@ export class NavComponent {
   @ViewChild('svgMenuIcon', { static: true }) svgMenuIcon!: ElementRef<SVGSVGElement>;
 
   svgElement: any;
+  isMenuOpen: boolean = false;
 
   constructor(public menuService: MenuService) { }
 
@@ -25,5 +26,6 @@ export class NavComponent {
 
   toggleMenuFromNav() {
     this.menuService.menuAnimation();
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

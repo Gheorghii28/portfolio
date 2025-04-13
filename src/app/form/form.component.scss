@@ -98,6 +98,7 @@
 
     p {
         white-space: nowrap;
+        background-color: var(--black-color);
 
         @media (max-width: 1024px) {
             text-align: center;
@@ -161,6 +162,7 @@
         .btn {
             color: var(--cream-color);
             border-color: var(--cream-color);
+            background-color: var(--black-color);
         }
     }
 }

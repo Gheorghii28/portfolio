@@ -44,6 +44,9 @@
     }
 
     .left {
+        .intro-text {
+            margin-bottom: 18px;
+        }        
 
         div {
             display: flex;
@@ -58,13 +61,7 @@
                 text-decoration: underline;
                 transition: color 0.3s ease;
             }
-        }
-
-        #more {
-            display: flex;
-            flex-direction: column;
-        }
-          
+        } 
     }
 
     .right {

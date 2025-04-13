@@ -247,7 +247,7 @@
         height: 60px;
     }
 
-    &:hover {
+    &:hover, &:focus-within {
         .shape {
             stroke-dashoffset: 334;
             stroke-dasharray: 100 568;

@@ -1,21 +1,21 @@
-<section *ngIf="menuService.isMenuOpen" class="menu">
+<section *ngIf="menuService.isMenuOpen" class="menu" aria-live="assertive" aria-labelledby="menu-heading">
     <div class="top pos-rel">
         <div class="top-content" [class.top-to-center]="menuService.isMenuContentDisplayed"
             [class.center-to-top]="!menuService.isMenuContentDisplayed">
             <div class="wrapper">
-                <button class="svg-wrapper" (click)="toggleMenu('section-about-me')">
+                <button class="svg-wrapper" (click)="toggleMenu('section-about-me')" aria-expanded="false" aria-controls="section-about-me" aria-label="Open About Me section">
                     <svg xmlns="http://www.w3.org/2000/svg">
                         <rect class="shape" />
                         <text x="17.665" y="45" class="text">About me</text>
                     </svg>
                 </button>
-                <button class="svg-wrapper" (click)="toggleMenu('section-my-skills')">
+                <button class="svg-wrapper" (click)="toggleMenu('section-my-skills')" aria-expanded="false" aria-controls="section-my-skills" aria-label="Open My Skills section">
                     <svg xmlns="http://www.w3.org/2000/svg">
                         <rect class="shape" />
                         <text x="37.325" y="45" class="text">My skills</text>
                     </svg>
                 </button>
-                <button class="svg-wrapper" (click)="toggleMenu('section-portfolio')">
+                <button class="svg-wrapper" (click)="toggleMenu('section-portfolio')" aria-expanded="false" aria-controls="section-portfolio" aria-label="Open Portfolio section">
                     <svg xmlns="http://www.w3.org/2000/svg">
                         <rect class="shape" />
                         <text x="34.425" y="45" class="text">Portfolio</text>
@@ -30,18 +30,18 @@
             [class.center-to-bottom]="!menuService.isMenuContentDisplayed">
             <div class="wrapper">
                 <div class="left">
-                    <h2>Say Hi!</h2>
-                    <span>kontakt@gheorghii-popovici.de</span>
+                    <h2 id="menu-heading">Say Hi!</h2>
+                    <span>kontakt&#64;gheorghii-popovici.de</span>
                 </div>
                 <div class="right">
                     <a href="https://github.com/Gheorghii28" target="_blank">
-                        <img src="./assets/icons/github.svg">
+                        <img src="./assets/icons/github.svg" alt="GitHub Profile">
                     </a>
                     <a href="mailto:kontakt@gheorghii-popovici.de" target="_blank">
-                        <img src="./assets/icons/email.svg">
+                        <img src="./assets/icons/email.svg" alt="Email">
                     </a>
                     <a href="https://www.linkedin.com/in/gheorghii-popovici-0475a017a/" target="_blank">
-                        <img src="./assets/icons/linkedin.svg">
+                        <img src="./assets/icons/linkedin.svg" alt="Linkedin Profile">
                     </a>
                 </div>
             </div>

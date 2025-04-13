@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ScrollService } from '../services/scroll.service';
+import { SharedService } from '../services/shared.service';
 
 @Component({
   selector: 'app-about-me',
@@ -9,10 +10,11 @@ import { ScrollService } from '../services/scroll.service';
 export class AboutMeComponent {
   showMore: boolean = false;
 
-  constructor(private scrollService: ScrollService) {}
+  constructor(private scrollService: ScrollService, private sharedService: SharedService) {}
 
   public scrollToSection(): void {
     this.scrollService.scrollToSection('section-footer');
+    this.sharedService.triggerFocusElement('form-title');
   }
 
   public toggleMore(): void {

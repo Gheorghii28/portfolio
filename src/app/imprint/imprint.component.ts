@@ -25,7 +25,7 @@ export class ImprintComponent {
   hideForm() {
     const footerElement = this.footerComponent.mySectionRef.nativeElement;
     this.renderer.addClass(footerElement.querySelector('.form-container'), 'd-none');
-    this.renderer.addClass(footerElement.querySelector('.anker-arrow-top'), 'd-none');
+    this.renderer.addClass(footerElement.querySelector('.arrow-top-container'), 'd-none');
   }
 
   private scrollToTop(): void {

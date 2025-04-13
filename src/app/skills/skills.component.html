@@ -1,8 +1,14 @@
 <div class="skills-container">
     <div *ngFor="let skill of skills" class="skills-box">
-        <div class="skills">
-            <img src="./assets/icons/skills-icons/{{returnSvgSrc(skill)}}">
+        <div class="skills" aria-hidden="true">
+            <img src="./assets/icons/skills-icons/{{returnSvgSrc(skill)}}" alt="{{returnSkillName(skill)}} icon"/>
             <span [class.min-content]="skill === 'Material-Design'">{{returnSkillName(skill)}}</span>
         </div>
     </div>
+    <p class="sr-only" aria-live="polite">
+        These are my skills:
+        <ng-container *ngFor="let skill of skills; let isLast = last">
+            {{ returnSkillName(skill) }}<span *ngIf="!isLast">, </span><span *ngIf="isLast">.</span>
+        </ng-container>
+    </p>
 </div>

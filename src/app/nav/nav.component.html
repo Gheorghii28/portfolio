@@ -1,12 +1,22 @@
 <nav class="navigation">
+    <div id="top-element" role="banner" class="sr-only" tabindex="-1" aria-label="Top of page" aria-live="polite" aria-atomic="true">
+        <!-- This element is used to allow screen readers to navigate to the top of the page. It is hidden from sighted users. -->
+    </div>
+    <a href="#main" class="sr-only">Skip to main content</a>
     <div class="wrapper">
-        <a href="">
-            <img class="logo" src="./assets/img/logo-light.png">
+        <a href="/">
+            <img class="logo" src="./assets/img/logo-light.png" aria-label="Website logo, click to reload the page" alt="Logo of the website">
         </a>
-        <svg #svgMenuIcon (click)="toggleMenuFromNav()" class="menu-icon" [attr.width]="menuService.paths[0]['width']" [attr.height]="menuService.paths[0]['height']" [attr.viewBox]="menuService.paths[0]['viewBox']" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="path1-nav" [attr.d]="menuService.paths[0]['path1']" stroke="black" stroke-width="4" stroke-linecap="square"/>
-            <path class="path2-nav" [attr.d]="menuService.paths[0]['path2']" stroke="black" stroke-width="4" stroke-linecap="square"/>
-            <path class="path3-nav" [attr.d]="menuService.paths[0]['path3']" stroke="black" stroke-width="4" stroke-linecap="square"/>
-        </svg>
+        <button 
+            class="reset" 
+            (click)="toggleMenuFromNav()"
+            [attr.aria-expanded]="isMenuOpen ? 'true' : 'false'"
+            [attr.aria-label]="isMenuOpen ? 'Close menu' : 'Open menu'">
+            <svg #svgMenuIcon class="menu-icon" [attr.width]="menuService.paths[0]['width']" [attr.height]="menuService.paths[0]['height']" [attr.viewBox]="menuService.paths[0]['viewBox']" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="path1-nav" [attr.d]="menuService.paths[0]['path1']" stroke="black" stroke-width="4" stroke-linecap="square"/>
+                <path class="path2-nav" [attr.d]="menuService.paths[0]['path2']" stroke="black" stroke-width="4" stroke-linecap="square"/>
+                <path class="path3-nav" [attr.d]="menuService.paths[0]['path3']" stroke="black" stroke-width="4" stroke-linecap="square"/>
+            </svg>
+        </button>
     </div>
 </nav>

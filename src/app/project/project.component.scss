@@ -28,7 +28,7 @@
         align-items: center;
         margin-bottom: 50px;
 
-        &:hover {
+        &:hover, &:focus-within {
 
             .frame {
                 opacity: 1;
@@ -218,6 +218,12 @@
         .info {
             transform: translateX(-200vw);
 
+            .btn {
+                &:hover .icon-hover, &:focus-within .icon-hover {
+                  opacity: 1;
+                }
+              }              
+
             @media (max-width: 1024px) {
                 margin-top: 10px;
                 display: flex;
@@ -276,7 +282,7 @@
                 @media (max-width: 768px) {
                     padding: 10px 30px;
 
-                    &:hover {
+                    &:hover, &:focus-within {
                         padding: 10px 40px;
                     }
                 }
@@ -289,9 +295,39 @@
         justify-content: flex-start;
         gap: 50px;
 
+        .icon-hover {
+            width: 30px;
+            right: 20px;
+            top: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 1440px) {
+
+            .icon-hover {
+                top: 10px;
+                transform: translateX(0);
+            }
+        }
+
         @media (max-width: 1024px) {
             justify-content: start;
             gap: 30px;
+
+            .icon-hover {
+                width: 20px;
+                top: 12px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .icon-hover {
+                top: 8px;
+                right: 10px;
+            }
         }
     }
 }
@@ -299,7 +335,7 @@
 .odd-project-class {
     flex-direction: row-reverse;
 
-    &:hover {
+    &:hover, &:focus-within {
 
         .info {
             transform: translateX(0vw) !important;

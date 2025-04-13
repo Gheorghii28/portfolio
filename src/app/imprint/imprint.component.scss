@@ -33,9 +33,10 @@
         gap: 5px;
 
         a {
+            width: fit-content;
             color: var(--secundario-color);
 
-            &:hover {
+            &:hover, &:focus-within {
                 text-decoration:underline;
             }
         }

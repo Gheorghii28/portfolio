@@ -1,20 +1,20 @@
 <div class="form-container pos-rel">
-    <h3>Want to discuss a new project?</h3>
+    <h3 id="form-title" tabindex="-1">Want to discuss a new project?</h3>
     <p>Say hello! let's discuss your ideas and make it happen</p>
     <form (submit)="sendMail()" ngNativeValidate #myForm>
         <div #nameFieldSet class="fieldset pos-rel">
-            <label class="legend bottom14 name-label">Your name</label>
-            <input #nameField type="text" name="name">
+            <label for="name" class="legend bottom14 name-label">Your name</label>
+            <input #nameField id="name" type="text" name="name">
         </div>
         <div #emailFieldSet class="fieldset pos-rel">
-            <label class="legend bottom14 email-label">Your email</label>
-            <input #emailField type="text" name="email">
+            <label for="email" class="legend bottom14 email-label">Your email</label>
+            <input #emailField id="email" type="email" name="email" autocomplete="email">
         </div>
         <div #messageFieldSet class="fieldset pos-rel">
-            <label id="label-textarea" class="legend message-label top14">Your message</label>
-            <textarea #messageField name="message" id="" cols="30" rows="10"></textarea>
+            <label id="label-textarea" for="your-message" class="legend message-label top14">Your message</label>
+            <textarea #messageField name="message" id="your-message" cols="30" rows="10"></textarea>
         </div>
-        <button #sendBtn class="btn">Send message</button>
+        <button #sendBtn class="btn" type="submit">Send message</button>
     </form>
     <div #formResultInfo>
         <div #sendResultInfo>

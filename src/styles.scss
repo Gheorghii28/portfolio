@@ -1,6 +1,6 @@
 :root {
     --cream-color: #FFFCF3;
-    --secundario-color: #00BC8F;
+    --secundario-color: #008564;
     --black-color: #000;
 }
 
@@ -60,7 +60,7 @@ h2 {
     width: max-content;
     font-family: 'Syne', sans-serif;
 
-    &:hover {
+    &:hover, &:focus-within {
         color: var(--secundario-color);
     }
 
@@ -96,6 +96,45 @@ a {
     color: var(--black-color);
     text-decoration: none;
 }
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-block {
+    font-family: 'Overpass', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+    margin-top: 0;
+    margin-bottom: 60px;
+
+    @media (max-width: 1024px) {
+        font-size: 18px;
+    }
+}
+
+button.reset {
+    width: fit-content;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
 
 .d-none {
     display: none !important;
@@ -116,7 +155,7 @@ a {
     cursor: pointer;
     transition: all 125ms ease-out;
 
-    &:hover {
+    &:hover, &:focus-within {
         box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
         padding: 15px 60px;
         font-weight: 700;
@@ -125,7 +164,7 @@ a {
     @media (min-width: 1441px) {
         padding: 20px 60px;
 
-        &:hover {
+        &:hover, &:focus-within {
             padding: 20px 80px;
         }
     }
@@ -147,6 +186,10 @@ a {
 
 .pos-rel {
     position: relative;
+}
+
+.pos-abs {
+    position: absolute;
 }
 
 .logo {
@@ -189,4 +232,12 @@ a {
     @media (max-width: 480px) {
         padding-top: 76px;
     }
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+    outline: 4px solid var(--secundario-color);
+    border-radius: 5px;
 }

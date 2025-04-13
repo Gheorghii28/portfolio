@@ -1,32 +1,38 @@
 <section id="section-about-me" class="about-me section-top">
     <div class="wrapper ">
-        <h2>About me</h2>
+        <h2 id="section-about-me-title" tabindex="-1">About me</h2>
         <div class="content">
             <div class="left">
-                <p style="margin-bottom: 18px;">
-                    Hello! I'm Gheorghii Popovici, a passionate web developer based in Kerpen, near Cologne, Germany. 
-                    With a background in digital marketing, I transitioned into the dynamic world of web development and am excited to share my experience and skills with you.
-                    <span *ngIf="!showMore" class="dots" style="cursor: pointer;"  (click)="toggleMore()">... Show more</span>
-                </p>
-                <div *ngIf="showMore" id="more">
-                    <p style="margin-bottom: 18px;">
-                        Originally hailing from the Republic of Moldova, I now proudly call Germany my home. 
-                        Embarking on my programming path, I'm thrilled to channel my creativity and problem-solving skills into the ever-evolving tech industry. 
-                        In my earlier chapters, I wore multiple hats, working on digital marketing strategies, content creation, and social media management.
-                    </p>
-                    <p  style="margin-bottom: 18px;">
-                        This diverse experience eventually led me to web development, where I found my passion for building engaging digital solutions. 
-                        From collaborating with talented programmers and designers to orchestrating processes and web optimization, every step was a testament to innovation. 
-                        Explore my portfolio to see my projects.
-                        <span *ngIf="showMore" class="dots" style="cursor: pointer;" (click)="toggleMore()">... Show less</span>
+                <div class="flex-col">
+                    <p class="intro-text">
+                        Hello! I'm Gheorghii Popovici, a passionate web developer based in Kerpen, near Cologne, Germany. 
+                        With a background in digital marketing, I transitioned into the dynamic world of web development and am excited to share my experience and skills with you.
+                        <span *ngIf="showMore">
+                            <br><br>
+                            Originally hailing from the Republic of Moldova, I now proudly call Germany my home. 
+                            Embarking on my programming path, I'm thrilled to channel my creativity and problem-solving skills into the ever-evolving tech industry. 
+                            In my earlier chapters, I wore multiple hats, working on digital marketing strategies, content creation, and social media management.
+                        </span>
+                        <span *ngIf="showMore">
+                            <br><br>
+                            This diverse experience eventually led me to web development, where I found my passion for building engaging digital solutions. 
+                            From collaborating with talented programmers and designers to orchestrating processes and web optimization, every step was a testament to innovation. 
+                            Explore my portfolio to see my projects.
+                        </span>
+                        <button 
+                            class="reset" 
+                            (click)="toggleMore()" 
+                            [attr.aria-expanded]="showMore ? 'true' : 'false'">
+                            <span class="dots text-block" style="cursor: pointer;">{{ showMore ? '... Show less' : '... Show more' }}</span>
+                        </button>
                     </p>
                 </div>
                 <div class="desktop-display"  style="margin-top: 60px;">
-                    <button (click)="scrollToSection()" class="btn">Let’s talk</button>
+                    <button (click)="scrollToSection()" class="btn" aria-label="Scroll to contact section">Let’s talk</button>
                 </div>
             </div>
             <div class="right">
-                <img src="./assets/img/photo_2_transparent_small.png">
+                <img src="./assets/img/photo_2_transparent_small.png" alt="Photo of Gheorghii Popovici" class="photo">
             </div>
         </div>
     </div>
